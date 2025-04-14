@@ -5,23 +5,31 @@ public class ReminderSetter extends Thread {
     int time;
     public ReminderSetter() {
         System.out.println("Set Your Timer in seconds");
-        this.time = sc.nextInt();
+        this.TimerSetup(sc.nextInt());
         System.out.println("Timer is set to "+time);
+    }
+    public void TimerSetup(int time){
+        this.time = time;
         start();
     }
     @Override
     public void run() {
+        int timeElapsed = 100000000;
         System.out.println();
-        while (time>0) {
+        while (timeElapsed>0) {
             try {
                 ReminderSetter.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            time--;
+            if(timeElapsed%time==0){
+                System.out.println("                                                           |>>>>>>>>>>>>>>>>>>>>>|");
+                System.out.println("                                                           | Time to Drink Water |");
+                System.out.println("                                                           |>>>>>>>>>>>>>>>>>>>>>|");
+                System.out.println();
+            }
+            timeElapsed--;
         }
-        System.out.println("Time to Drink Water");
-
     }
 
 }

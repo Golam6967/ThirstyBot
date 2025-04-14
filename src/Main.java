@@ -9,18 +9,19 @@ public class Main {
 
 
 
+        System.out.println("|==========================================================|");
+        System.out.println("| 1. Check Your Daily Water Goal                           |");
+        System.out.println("| 2. Set Reminder                                          |");
+        System.out.println("| 3. Log Your Water Intake                                 |");
+        System.out.println("| 4. View History                                          |");
+        System.out.println("| 5. Streak Tracker                                        |");
+        System.out.println("| 0. Exit                                                  |");
+        System.out.println("|==========================================================|");
         while(true){
-            System.out.println("|==========================================================|");
-            System.out.println("| 1. Check Your Daily Water Goal                           |");
-            System.out.println("| 2. Set Reminder                                          |");
-            System.out.println("| 3. Log Your Water Intake                                 |");
-            System.out.println("| 4. View History                                          |");
-            System.out.println("| 5. Streak Tracker                                        |");
-            System.out.println("| 0. Exit                                                  |");
-            System.out.println("|==========================================================|");
-           System.out.print("\nChoose an Option: ");
+
+           System.out.println("\nChoose an Option: ");
            int choice  = sc.nextInt();
-           int d=0;
+           int d=0,f=0;
             switch (choice) {
                 case 1:
                     WaterIntakeCalculator wic = new WaterIntakeCalculator();
@@ -45,6 +46,14 @@ public class Main {
             if(choice == 0 || d == 1){
                 break;
             }
+            System.out.println("|==========================================================|");
+            System.out.println("| 1. Check Your Daily Water Goal                           |");
+            System.out.println("| 2. Set Reminder                                          |");
+            System.out.println("| 3. Log Your Water Intake                                 |");
+            System.out.println("| 4. View History                                          |");
+            System.out.println("| 5. Streak Tracker                                        |");
+            System.out.println("| 0. Exit                                                  |");
+            System.out.println("|==========================================================|");
         }
     }
 }
