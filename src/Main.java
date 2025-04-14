@@ -1,2 +1,50 @@
+import java.util.Scanner;
+
 public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("                                                                                          /==========================\\ ");
+        System.out.println("                                                                                         /   Welcome  To ThirstBot    \\ ");
+        System.out.println("                                                                                        /==============================\\ ");
+
+
+
+        while(true){
+            System.out.println("|==========================================================|");
+            System.out.println("| 1. Check Your Daily Water Goal                           |");
+            System.out.println("| 2. Set Reminder                                          |");
+            System.out.println("| 3. Log Your Water Intake                                 |");
+            System.out.println("| 4. View History                                          |");
+            System.out.println("| 5. Streak Tracker                                        |");
+            System.out.println("| 0. Exit                                                  |");
+            System.out.println("|==========================================================|");
+           System.out.print("\nChoose an Option: ");
+           int choice  = sc.nextInt();
+           int d=0;
+            switch (choice) {
+                case 1:
+                    WaterIntakeCalculator wic = new WaterIntakeCalculator();
+                    wic.CalculateWI();
+                    break;
+                case 2:
+                    ReminderSetter reminder = new ReminderSetter();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 0:
+                    break;
+                default:
+                    d=1;
+                    System.out.println("Invalid Option");
+                    break;
+            }
+            if(choice == 0 || d == 1){
+                break;
+            }
+        }
+    }
 }
