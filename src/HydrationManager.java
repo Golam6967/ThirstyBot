@@ -1,7 +1,7 @@
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class Main {
+public class HydrationManager {
     public static void main(String[] args) throws SQLException {
         Scanner sc = new Scanner(System.in);
         System.out.println("                                                                                          /==========================\\ ");
@@ -18,7 +18,7 @@ public class Main {
         System.out.println("| 5. Streak Tracker                                        |");
         System.out.println("| 0. Exit                                                  |");
         System.out.println("|==========================================================|");
-        double WaterLimit;
+        double WaterLimit=0;
         while(true){
 
            System.out.println("\nChoose an Option: ");
@@ -43,7 +43,8 @@ public class Main {
                     hl.AccessDatabase();
                     break;
                 case 5:
-
+                        StreakDetector streak = new StreakDetector((int)WaterLimit);
+                        streak.AccessDatabase();
                     break;
                 case 0:
                     break;

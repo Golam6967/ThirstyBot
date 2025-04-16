@@ -5,6 +5,8 @@ public class EntryLogger{
     DatabaseSetup databaseSetup = new DatabaseSetup();
     Scanner st = new Scanner(System.in);
     Scanner inte = new Scanner(System.in);
+
+
     public void Login() throws SQLException {
         System.out.print("Enter Your Name : ");
         String name = st.nextLine();

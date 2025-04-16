@@ -12,18 +12,19 @@ public class HIstoryLogger implements IDatabaseAccessor{
 
         while(rs.next()){
             if(counter == 0){
-            System.out.println("---------------------------------------------------");
-            System.out.println("|   Name   |  Age  |   Time       |  Water(in Ml) |");
-            System.out.println("---------------------------------------------------");
+            System.out.println("|-----------------------------------------------------------------------------------|");
+            System.out.println("|   Name      |  Age            |     Date      | Time            | Water(in Ml)    |");
+            System.out.println("|-----------------------------------------------------------------------------------|");
             }
             counter++;
             String name = rs.getString(1);
-            int age = rs.getInt(3);
-            String time = rs.getString(2);
-            int  Water = rs.getInt(4);
-            System.out.println("|-------------------------------------------------|");
-            System.out.println("|"+name+" | "+age+" | "+time+" | "+Water+"    |");
-            System.out.println("|-------------------------------------------------|");
+            int age = rs.getInt(2);
+            String date = rs.getString(3);
+            String time = rs.getString(4);
+            int  Water = rs.getInt(5);
+            System.out.println("|-----------------------------------------------------------------------------------|");
+            System.out.println("| "+name+"    |     "+age+"     |     "+date+"  |   "+time+"      |     "+Water+"        |");
+            System.out.println("|-----------------------------------------------------------------------------------|");
 
         }
         if(counter == 0){
